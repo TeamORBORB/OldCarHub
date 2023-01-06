@@ -1,37 +1,70 @@
-## Family Night
-> Each evening family will meet.  Family nights are intended to build the Leuck family legacy.
+<!DOCTYPE html>
 
-### Leuck Greet
-> Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
-- Start with Movie
-- Transition to games
-- Mom and Pop welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
+<html>
+<div id="searchbox"></div>
+<html>
 
-Trivia, which one is Frank and Judith?  who are the others?
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/sherwood_glena.jpg" alt="Field" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/frank_judith.jpg" alt="Bocce" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/norville_erma.jpg" alt="Pool" style="width:100%">
-  </div>
-</div>
+<script>
 
-### Tuesday Family Night
-> Family History night.  What better way to unite in reunion spirit then talk about us, explore our similarities and get excited about our differences.  A night of stories on how we all came together as Leuck's, plus some games on our similarities and differences.
-- Learn the "Leuck Song"
-- Kick off with some games to look at our similarities and differences.
-- Originals, plan 5 minute story and introduction on you and your clan.   Props and acting encouraged with your stories.  Stick to the 5 minute time line.
-- Frank and Judith love story
-- Encores and requests
-- Family prayer, 'Leuck style'
 
-### Wednesday Family Night
+import { searchBox } from 'instantsearch.js/es/widgets';
 
-### Thursday Family Night
+const { searchBox } = instantsearch.widgets;
+// or directly use instantsearch.widgets.searchBox()
 
-### Friday Family Night
+  searchBox({
+  container: string|HTMLElement,
+  // Optional parameters
+  placeholder: string,
+  autofocus: boolean,
+  searchAsYouType: boolean,
+  showReset: boolean,
+  showSubmit: boolean,
+  showLoadingIndicator: boolean,
+  queryHook: function,
+  templates: object,
+  cssClasses: object,
+});
+
+// Create a render function
+const renderSearchBox = (renderOptions, isFirstRender) => {
+  const { query, refine, clear, isSearchStalled, widgetParams } = renderOptions;
+
+  if (isFirstRender) {
+    const input = document.createElement('input');
+
+    const loadingIndicator = document.createElement('span');
+    loadingIndicator.textContent = 'Loading...';
+
+    const button = document.createElement('button');
+    button.textContent = 'X';
+
+    input.addEventListener('input', event => {
+      refine(event.target.value);
+    });
+
+    button.addEventListener('click', () => {
+      clear();
+    });
+
+    widgetParams.container.appendChild(input);
+    widgetParams.container.appendChild(loadingIndicator);
+    widgetParams.container.appendChild(button);
+  }
+
+  widgetParams.container.querySelector('input').value = query;
+  widgetParams.container.querySelector('span').hidden = !isSearchStalled;
+};
+
+// create custom widget
+const customSearchBox = connectSearchBox(
+  renderSearchBox
+);
+
+// instantiate custom widget
+search.addWidgets([
+  customSearchBox({
+    container: document.querySelector('#searchbox'),
+  })
+]);
+<script>
