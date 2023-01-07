@@ -14,3 +14,100 @@
     flex: 33.33%;
     padding: 5px;
   }
+
+  h1 {
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    text-align: center;
+    font-size: 50px
+  }
+
+  p {
+    padding: 10x;
+    text-align: center;
+    font-size: 30px
+  }
+
+  .container {
+    position: relative; left:-605px; top:-300px;
+    display: inline-block;
+    width: 100%;
+    float: left;
+    z-index:-1;
+  }
+  .container .cover {
+    position: fixed;
+    display: inline-block;
+    z-index: -1;
+  }
+  .container .cover.top { 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 500px;
+  }
+  .container .cover.right { 
+    top: 0; right: -1000; 
+    width: 0px; 
+    height: 100%;
+  }
+  .container .cover.bottom { 
+    bottom: 0; left: 0; 
+    width: 100%; 
+    height: 500px;
+  }
+  .container .cover.left { 
+    top: 0; left: 0; 
+    width: 0px; 
+    height: 100%;
+  }
+  .container .bg-image.one {
+    background-image: url(https://user-images.githubusercontent.com/111478625/211130810-f662b508-bf77-4cf4-af4b-60e6b867f645.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 6000px;
+    height: 950px;
+    z-index:-1;
+  }
+  .container .bg-image.two {
+    background-image: url(https://user-images.githubusercontent.com/111478625/211131544-56b5ca0a-d6d4-4b10-8f01-a059327b8606.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 6000px;
+    height: 950px;
+    z-index:-1;
+  }
+  .container .bg-image.three {
+    background-image: url(https://user-images.githubusercontent.com/111478625/211130810-f662b508-bf77-4cf4-af4b-60e6b867f645.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 6000px;
+    height: 950px;
+    z-index:-1;
+  }
+  
+  .container .text {
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    color: #000000;
+    z-index: 20;
+  }
+  .container .text.one {
+    top: 40px;
+    left: 50px;
+  }
+  .container .text.two {
+    top: 500px;
+    left: 50px;
+  }
+  .container .text.three {
+    top: 940px;
+    left: 50px;
+  }
+
