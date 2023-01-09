@@ -14,3 +14,92 @@
     flex: 33.33%;
     padding: 5px;
   }
+
+  h1 {
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, rgb(118, 255, 253), rgb(38, 157, 255));
+    text-align: center;
+    font-size: 50px
+  }
+
+  p {
+    padding: 10x;
+    text-align: center;
+    font-size: 30px
+  }
+
+  .container {
+    position: relative; left:-605px; top:-300px;
+    display: inline-block;
+    width: 100%;
+    float: left;
+    z-index:-1;
+  }
+  .container .cover {
+    position: fixed;
+    display: inline-block;
+    z-index: -1;
+  }
+  .container .cover.top { 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 500px;
+  }
+  .container .cover.right { 
+    top: 0; right: -1000; 
+    width: 0px; 
+    height: 100%;
+  }
+  .container .cover.bottom { 
+    bottom: 0; left: 0; 
+    width: 100%; 
+    height: 500px;
+  }
+  .container .cover.left { 
+    top: 0; left: 0; 
+    width: 0px; 
+    height: 100%;
+  }
+  .container .bg-image.one {
+    background-image: url(https://user-images.githubusercontent.com/111478625/211130810-f662b508-bf77-4cf4-af4b-60e6b867f645.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 1667px;
+    height: 950px;
+    z-index:-1;
+  }
+  .container .bg-image.two {
+    background-image: url(https://user-images.githubusercontent.com/111478625/211131544-56b5ca0a-d6d4-4b10-8f01-a059327b8606.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 1667px;
+    height: 950px;
+    z-index:-1;
+  }
+  .container .bg-image.three {
+    background-image: url(https://user-images.githubusercontent.com/111478625/211130810-f662b508-bf77-4cf4-af4b-60e6b867f645.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 1667px;
+    height: 950px;
+    z-index:-1;
+  }
+  .preloader {
+  background: rgb(150, 212, 237) url("https://media.giphy.com/media/3o6ZtjUZAD5Lf0QFLW/giphy.gif") no-repeat center center;
+  background-size: 10%;
+  height: 100vh;
+  min-width: 929.00;
+  min-height: 929.00;
+  top: -30px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  }
+  
+
