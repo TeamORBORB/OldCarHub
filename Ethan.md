@@ -1,6 +1,6 @@
 <body>
 <html>Hello World</html>
-<div id = "preloader"></div>
+<div class = "preloader"></div>
 <script>
     var loader = document.getElementById("preloader");
     window.addEventListener("load", function(){
