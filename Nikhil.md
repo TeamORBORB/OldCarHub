@@ -2,7 +2,13 @@
 <head>
 
 <style>
-body{background-image:url('background.gif'); background-repeat:repeat;}
+body{
+  background-image: url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif); 
+  background-repeat:repeat;
+  background-size: cover;
+
+  
+}
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
